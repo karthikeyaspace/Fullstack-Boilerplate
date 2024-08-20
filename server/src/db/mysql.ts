@@ -1,9 +1,10 @@
 // mysql init.ts
 
-import mysql from 'mysql';
-import config from '../config/env';
+import mysql from "mysql2";
+import config from "../config/env";
+import logger from "../utils/logger";
 
-const sqlpool = mysql.createPool({
+const sqlPool = mysql.createPool({
   connectionLimit: 10,
   host: config.MYSQL_HOST,
   user: config.MYSQL_USER,
@@ -11,6 +12,11 @@ const sqlpool = mysql.createPool({
   database: config.MYSQL_DATABASE,
 });
 
+sqlPool.getConnection((err, connection) => {
+  if (err) {
+    logger(`MySQL connection error`, "server/db/mysql.ts", err);
+  }
+  console.log("Connected to MySQL as id " + connection.threadId);
+});
 
-
-export default sqlpool;
+export default sqlPool;

@@ -12,7 +12,7 @@ import logger from "../../utils/logger";
 const uploadToS3 = async (file: File) => {
   const params = {
     Bucket: config.AWS_BUCKET,
-    Key: randcode(12),
+    Key: randcode(8),
     Body: file,
   };
 
@@ -104,4 +104,4 @@ const deleteFileFromS3 = async (awskey: string) => {
 };
 
 
-export { uploadToS3, getFileFromS3, deleteFileFromS3 };
+export { uploadToS3, getFileFromS3, deleteFileFromS3, getSignedUrlFromS3 };

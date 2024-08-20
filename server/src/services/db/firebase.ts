@@ -9,7 +9,6 @@ import {
   where,
 } from "firebase/firestore";
 
-// fire base crud
 
 const createDoc = async (collectionName: string, data: any) => {
   try {

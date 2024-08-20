@@ -14,4 +14,4 @@ export const connect = async () => {
 };
 
 
-export default mongoclient;
+export const getDb = () => mongoclient.db(config.MONGO_DB_NAME);

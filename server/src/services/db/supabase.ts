@@ -1,8 +1,6 @@
 import supabase from "../../db/supabase";
 import logger from "../../utils/logger";
 
-// supabase crud
-
 const createRow = async (table: string, data: any) => {
   try {
     const { data: row, error } = await supabase.from(table).insert(data);
@@ -24,7 +22,7 @@ const readRow = async (table: string, id: string) => {
       .select("*")
       .eq("id", id)
       .single();
-      
+
     if (error) {
       logger("Error reading row", "server/services/db/supabase.ts", error);
       return { success: false, data: null };
