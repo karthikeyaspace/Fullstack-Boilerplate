@@ -1,17 +1,29 @@
 // login, register
 
-import { Router } from 'express';
-import { login, register, logout } from '../controllers/auth.controller';
+import { Router } from "express";
+import {
+  login,
+  register,
+  logout,
+  forgotPassword,
+} from "../controllers/auth.controller";
+import expressAsyncHandler from "express-async-handler";
 
-const router = Router();
+const auth = Router();
 
 // Register a new user
-router.post('/register', register);
+auth.post("/register", expressAsyncHandler(register));
 
 // Log in a user
-router.post('/login', login);
+auth.post("/login", expressAsyncHandler(login));
 
 // Log out a user
-router.post('/logout', logout);
+auth.post("/logout", expressAsyncHandler(logout));
 
-export default router;
+auth.post("/forgot-password", expressAsyncHandler(forgotPassword));
+
+auth.post("/change-password", expressAsyncHandler(forgotPassword));
+
+auth.post("/verify-email", expressAsyncHandler(forgotPassword));
+
+export default auth;

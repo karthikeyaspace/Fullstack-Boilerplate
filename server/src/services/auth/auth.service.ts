@@ -1,40 +1,43 @@
 // auth.service.ts
 // purpose - to handle authentication logic
 
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 
-export const login = (req: Request, res: Response) => {
+const loginservice = (req: Request, res: Response) => {
   // login logic
-  res.send('login');
+  return { message: "login" };
 };
 
-
-export const logout = (req: Request, res: Response) => {
+const logoutservice = (req: Request, res: Response) => {
   // logout logic
-  res.send('logout');
+  return { message: "logout" };
 };
 
-export const register = (req: Request, res: Response) => {
+const registerservice = (req: Request, res: Response) => {
   // register logic
-  res.send('register');
+  return { message: "register" };
 };
 
-export const forgotPassword = (req: Request, res: Response) => {
+const forgotPassword = (req: Request, res: Response) => {
   // forgot password logic
-  res.send('forgot password');
+  return { message: "forgot password" };
 };
 
-export const changePassword = (req: Request, res: Response) => {
+const changePassword = (req: Request, res: Response) => {
   // change password logic
-  res.send('change password');
+  return { message: "change password" };
 };
 
-export const verifyEmail = (req: Request, res: Response) => {
+const verifyEmail = (req: Request, res: Response) => {
   // verify email logic
-  res.send('verify email');
+  return { message: "verify email" };
 };
 
-
-
-
-
+export {
+  loginservice,
+  logoutservice,
+  registerservice,
+  forgotPassword,
+  changePassword,
+  verifyEmail,
+};

@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import config from "../../config/env";
-import EmailOptions from "../../types/EmailOptions";
+import { EmailOptions } from "../../types";
 import logger from "../../utils/logger";
 
 const transporter = nodemailer.createTransport({
@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = async (options: EmailOptions) => {
   try {
-    await transporter.sendEmail(options);
+    await transporter.sendMail(options);
   } catch (err) {
     logger("Error sending email", "services/email", err);
   }

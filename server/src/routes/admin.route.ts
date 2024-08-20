@@ -1,31 +1,30 @@
-import express from 'express';
-import expressAsyncHandler from 'express-async-handler';
+import express from "express";
+import expressAsyncHandler from "express-async-handler";
+import {
+  getUser,
+  getUsers,
+  createUser,
+  updateUser,
+  deleteUser,
+} from "../controllers/admin.controller";
 
 const admin = express.Router();
 
-admin.get('/', expressAsyncHandler((req, res) => {
-  res.send('Admin route');
-}));
+admin.get(
+  "/",
+  expressAsyncHandler((req, res) => {
+    res.send("Admin route");
+  })
+);
+
+admin.get("user/:id", expressAsyncHandler(getUser));
+
+admin.get("/users", expressAsyncHandler(getUsers));
+
+admin.get("delete-user/:id", expressAsyncHandler(deleteUser));
+
+admin.post("update-user/:id", expressAsyncHandler(updateUser));
+
+admin.get("add-user", expressAsyncHandler(createUser));
 
 export default admin;
-
-// cgpt
-
-import { Router } from 'express';
-import { getAdmins, createAdmin, updateAdmin, deleteAdmin } from '../controllers/admin.controller';
-
-const router = Router();
-
-// Get all admins
-router.get('/', getAdmins);
-
-// Create a new admin
-router.post('/', createAdmin);
-
-// Update an existing admin
-router.put('/:id', updateAdmin);
-
-// Delete an admin
-router.delete('/:id', deleteAdmin);
-
-export default router;

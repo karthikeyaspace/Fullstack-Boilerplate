@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "FULL STACK DEVELOPMENT READY BOILERPLATE",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -9,10 +9,14 @@
     "dev": "nodemon src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Karthikeya Veruturi",
+  "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@types/mysql": "^2.15.26",
+    "@types/nodemailer": "^6.4.15",
     "typescript": "^5.5.4"
   },
   "dependencies": {
@@ -26,6 +30,7 @@
     "axios": "^1.7.4",
     "cheerio": "^1.0.0",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-async-handler": "^1.2.0",

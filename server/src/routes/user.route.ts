@@ -1,30 +1,19 @@
-import express from 'express';
-
-const user = express.Router();
-
-user.get('/', (req, res) => {
-  res.send('User route');
-});
-
-export default user;
-
-// cgpt
-
 import { Router } from 'express';
-import { getUsers, createUser, updateUser, deleteUser } from '../controllers/user.controller';
+import { getUser, createUser, updateUser, deleteUser } from '../controllers/user.controller';
+import expressAsyncHandler from 'express-async-handler';
 
-const router = Router();
+const user = Router();
 
 // Get all users
-router.get('/', getUsers);
+user.get('/:id', expressAsyncHandler(getUser));
 
 // Create a new user
-router.post('/', createUser);
+user.post('/', expressAsyncHandler(createUser));
 
 // Update an existing user
-router.put('/:id', updateUser);
+user.put('/:id', expressAsyncHandler(updateUser));
 
 // Delete a user
-router.delete('/:id', deleteUser);
+user.delete('/:id', expressAsyncHandler(deleteUser));
 
-export default router;
+export default user;

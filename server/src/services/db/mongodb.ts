@@ -1,5 +1,3 @@
-// mongodb crud
-import e from "express";
 import { getDb } from "../../db/mongodb";
 import logger from "../../utils/logger";
 

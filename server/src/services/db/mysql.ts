@@ -1,4 +1,3 @@
-// mysql crud
 import sqlPool from "../../db/mysql";
 
 const createRecord = (tableName: string, data: any) => {

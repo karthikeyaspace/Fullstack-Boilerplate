@@ -1,6 +1,6 @@
-import { Attachment } from 'nodemailer/lib/mailer';
+import { Attachment } from "nodemailer/lib/mailer";
 
-interface EmailOptions {
+export interface EmailOptions {
   from: string;
   to: string | string[];
   cc?: string;
@@ -10,5 +10,3 @@ interface EmailOptions {
   html?: string;
   attachments?: Attachment[];
 }
-
-export default EmailOptions;

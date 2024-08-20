@@ -5,3 +5,4 @@
 // 5. updateAdmin
 // 6. deleteAdmin
 
+// directly interacting with the database
