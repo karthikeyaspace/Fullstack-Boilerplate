@@ -6,6 +6,7 @@ import * as auth from "../services/auth/auth.service";
 
 const login = async (req: Request, res: Response) => {
   // implement auth.loginservice()
+  const { email, password } = req.body;
   res.send("login");
 };
 

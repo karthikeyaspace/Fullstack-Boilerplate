@@ -23,7 +23,12 @@ services - interact with api - supabase, firebase, ai apis for frontend
 config - env, api urls
 assets
 
+more to-do
+components/charts
 
+
+
+https://chatgpt.com/c/c66363f1-adf2-411c-8cbe-9dcffea7a766
 
 
 <!-- server -->

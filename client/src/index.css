@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dark {
+  --primary: 33, 33, 33;
+  --secondary: 209, 209, 209;
+}
+
+.light {
+  --primary: 246, 246, 246;
+  --secondary: 33, 33, 33;
+}
+
