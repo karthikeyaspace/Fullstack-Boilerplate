@@ -6,8 +6,8 @@ First off, thank you for considering contributing to this project! Your help is 
 
 We welcome contributions in various forms:
 
-- **Bug Reports**: If you find a bug, please [open an issue](#issue-reporting).
-- **Feature Requests**: If you have an idea for a new feature, [open an issue](#issue-reporting).
+- **Bug Reports**: If you find a bug, please [open an issue](https://github.com/karthikeyaspace/Fullstack-Boilerplate/issues/new).
+- **Feature Requests**: If you have an idea for a new feature, [open an issue](https://github.com/karthikeyaspace/Fullstack-Boilerplate/issues/new).
 - **Code Contributions**: Submit pull requests for bug fixes, new features, or improvements.
 - **Documentation**: Help us improve the documentation.
 
