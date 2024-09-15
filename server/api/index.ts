@@ -1,2 +1,2 @@
 // for deployment in vercel
-export * from "../src/index";
+export * from '../src/server'
